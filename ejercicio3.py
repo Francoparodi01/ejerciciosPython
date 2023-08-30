@@ -16,9 +16,12 @@ def solicitar_entero():
 # Crear una lista para almacenar los números
 numeros = []
 
-# Solicitar al usuario la cantidad deseada de números enteros y agregarlos a la lista
-for _ in range(10):
-    numeros.append(solicitar_entero())
+# Solicitar al usuario la cantidad deseada de números enteros y agregarlos a la lista. Al agregar un cero, la funcion solicitar_entero deja de ejecutarse e imprime la lista
+while True:
+    numero = int(input('Ingresa un número entero (o presiona 0 para finalizar): '))
+    if numero == 0:
+        break
+    numeros.append(numero)
 
 # Realizar operaciones entre los números ingresados
 
